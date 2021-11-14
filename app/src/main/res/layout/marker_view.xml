@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/tvDate"-->
+<!--            android:drawableEnd="@drawable/ic_date"-->
+<!--            android:drawableTint="@color/downy"                        android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:text="DATE"-->
+<!--            android:textColor="@color/haiti" />-->
+        <TextView
+            android:id="@+id/tvDate"
+            android:drawableLeft="@drawable/ic_date"
+            android:drawableTint="#a1d651"
+            android:textColor="@color/haiti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DATE"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_timelapse"
+            android:drawableTint="@color/haiti"
+            android:textColor="@color/haiti"
+            android:text="DURATION"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvAvgSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/speed_icon"
+            android:textColor="@color/haiti"
+            android:text="AVG SPEED"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_distance"
+            android:drawableTint="@color/downy"
+            android:textColor="@color/haiti"
+            android:text="DISTANCE"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvCaloriesBurned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/fat_fitness"
+            android:drawableTint="@color/tacha"
+            android:textColor="@color/haiti"
+            android:text="CALORIES BURNED"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

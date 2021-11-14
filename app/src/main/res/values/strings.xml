@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RunningApp</string>
+    <string name="google_maps_key"
+        templateMergeStrategy="preserve"
+        translatable="false">AIzaSyBnZBk6lfftAiwx1k1JL8XYILE_ycrU_Xw</string>
+    <string name="running_app">Running App</string>
+    <string name="total_distance">Total Distance</string>
+    <string-array name="filter_options">
+        <item>Date</item>
+        <item>Running Time</item>
+        <item>Distance</item>
+        <item>Average Speed</item>
+        <item>Calories Burned</item>
+    </string-array>
+</resources>

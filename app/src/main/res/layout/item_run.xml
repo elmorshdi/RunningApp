@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    style="@style/Widget.Task1.Card"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/transparent"
+    app:shapeAppearance="@style/listItem1.Corner">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivRunImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/listItem1.Corner" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/transparent"
+            android:elevation="10dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+
+                    android:orientation="vertical">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+
+<!--                        android:src="@drawable/ic_date"-->
+<!--                        app:tint="#64b3e8" />-->
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDate"
+                        android:drawableTop="@drawable/ic_date"
+                        android:drawableTint="@color/downy"                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="DATE"
+                        android:textColor="@color/haiti" />
+
+<!--                    <com.google.android.material.textview.MaterialTextView-->
+<!--                        android:id="@+id/tvvDate"-->
+<!--                        style="bold"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:text="DATE"-->
+<!--                        android:textColor="@color/french_gray" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+
+                    android:orientation="vertical">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+
+<!--                        android:src="@drawable/ic_timelapse"-->
+<!--                        app:tint="#22123d" />-->
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTime"
+                        android:drawableTop="@drawable/ic_timelapse"
+                        android:drawableTint="@color/haiti"                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Time"
+                        android:textColor="@color/haiti" />
+
+<!--                    <com.google.android.material.textview.MaterialTextView-->
+<!--                        android:id="@+id/tvvTime"-->
+<!--                        style="bold"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:text="Time"-->
+<!--                        android:textColor="@color/french_gray" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+
+                    android:orientation="vertical">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+
+<!--                        android:src="@drawable/ic_distance"-->
+<!--                        app:tint="#a1d651" />-->
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDistance"
+                        android:drawableTop="@drawable/ic_distance"
+                        android:drawableTint="#a1d651"                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="DISTANCE"
+                        android:textColor="@color/haiti" />
+
+<!--                    <com.google.android.material.textview.MaterialTextView-->
+<!--                        android:id="@+id/tvvDistance"-->
+<!--                        style="bold"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:text="DISTANCE"-->
+<!--                        android:textColor="@color/french_gray" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+
+                    android:orientation="vertical">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+
+<!--                        android:src="@drawable/speed_icon" />-->
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvAvgSpeed"
+                        android:drawableTop="@drawable/speed_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="AVGSPEED"
+                        android:textColor="@color/haiti" />
+
+<!--                    <com.google.android.material.textview.MaterialTextView-->
+<!--                        android:id="@+id/tvvAvgSpeed"-->
+<!--                        style="bold"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:text="SPEED"-->
+<!--                        android:textColor="@color/french_gray" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+
+<!--                        android:src="@drawable/ic_diet_fa"-->
+<!--                        app:tint="@color/tacha" />-->
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCalories"
+                        android:drawableTop="@drawable/fat_fitness"
+                        android:drawableTint="@color/tacha"                          android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="CALORIES"
+
+                        android:textColor="@color/haiti" />
+
+<!--                    <com.google.android.material.textview.MaterialTextView-->
+<!--                        android:id="@+id/tvvCalories"-->
+<!--                        style="bold"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:text="CALORIES"-->
+<!--                        android:textColor="@color/french_gray" />-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:padding="8dp">-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/ivRunImage"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/tvDate"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:text="DATE"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/tvTime"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ivRunImage" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/tvTime"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:text="TIME"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/tvDistance"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tvDate"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ivRunImage" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/tvDistance"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:text="DISTANCE"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/tvAvgSpeed"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tvTime"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ivRunImage" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/tvAvgSpeed"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:text="AVGSPEED"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/tvCalories"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tvDistance"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ivRunImage" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/tvCalories"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:text="CALORIES"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tvAvgSpeed"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ivRunImage" />-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
