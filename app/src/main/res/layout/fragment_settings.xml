@@ -21,8 +21,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:background="@drawable/bu1"
-            android:textColorHint="@color/french_gray"
-            android:textColor="@color/haiti"
+            android:textColorHint="@color/white"
+            android:textColor="@color/black"
             android:hint="Your Name"
             android:inputType="textPersonName" />
 
@@ -58,7 +58,7 @@
         android:layout_marginTop="16dp"
         android:text="Apply Changes"
         android:background="@drawable/bu"
-        app:backgroundTint="@color/haiti"
+        app:backgroundTint="@color/colorAccent"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

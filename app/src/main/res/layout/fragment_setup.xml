@@ -97,10 +97,9 @@
                 android:layout_height="wrap_content"
                 android:text=" Continue "
                 android:padding="5dp"
-
                 android:backgroundTint="@color/colorAccent"
                 android:background="@drawable/bu"
-                android:textColor="@color/haiti"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
