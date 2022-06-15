@@ -11,9 +11,9 @@ object Constants {
     const val ACTION_START_OR_RESUME_SERVICE = "ACTION_START_OR_RESUME_SERVICE"
     const val ACTION_STOP_SERVICE = "ACTION_STOP_SERVICE"
 
-    const val TIMER_UPDATE_INTERVAL = 50L
+    const val TIMER_UPDATE_INTERVAL = 500L
 
-    const val LOCATION_UPDATE_INTERVAL = 5000L
+    const val LOCATION_UPDATE_INTERVAL = 4000L
     const val FASTEST_LOCATION_INTERVAL = 2000L
 
     const val POLYLINE_COLOR = Color.GREEN
@@ -26,7 +26,7 @@ object Constants {
     const val SHARED_PREFERENCES_NAME = "sharedPref"
     const val KEY_FIRST_TIME_TOGGLE = "KEY_FIRST_TIME_TOGGLE"
     const val KEY_NAME = "KEY_NAME"
-    var USER_NAME = "USER_NAME"
+    const val USER_NAME = "USER_NAME"
 
     const val KEY_WEIGHT = "KEY_WEIGHT"
     const val ACTION_SHOW_TRACKING_FRAGMENT = "ACTION_SHOW_TRACKING_FRAGMENT"

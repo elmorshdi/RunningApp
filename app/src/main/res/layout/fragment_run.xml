@@ -4,29 +4,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+android:background="@color/white"
     android:layout_height="match_parent">
-    <Spinner
-        android:id="@+id/spFilter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/filter_options"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
 
 
-    <TextView
-        android:id="@+id/tvFilterBy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sort by:"
-        android:textColor="@color/haiti"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/spFilter"
-        app:layout_constraintEnd_toStartOf="@+id/spFilter"
-        app:layout_constraintTop_toTopOf="parent" />
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/sortLyt"
+    android:translationZ="11dp"
+    android:outlineAmbientShadowColor="@color/blueWhite"
+    android:outlineSpotShadowColor="@color/blueWhite"
+    android:layout_margin="20dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    app:cardCornerRadius="18dp"
+    android:elevation="12dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="10dp">
+        <Spinner
+            android:id="@+id/spFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:entries="@array/filter_options"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/tvFilterBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort by:"
+            android:textColor="@color/blueBlack"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/spFilter"
+            app:layout_constraintBottom_toBottomOf="@+id/spFilter"
+            app:layout_constraintEnd_toStartOf="@+id/spFilter"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvEmpty"
         android:layout_width="match_parent"
@@ -39,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spFilter" />
+        app:layout_constraintTop_toBottomOf="@+id/sortLyt" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRuns"
@@ -49,7 +74,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spFilter" />
+        tools:listitem="@layout/item_run"
+        app:layout_constraintTop_toBottomOf="@+id/sortLyt" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -62,8 +88,9 @@
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:rippleColor="@android:color/white"
-        app:tint="@color/haiti"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:rippleColor="@android:color/holo_orange_dark"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

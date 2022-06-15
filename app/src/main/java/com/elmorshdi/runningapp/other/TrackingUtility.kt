@@ -4,7 +4,7 @@ import android.Manifest
 import android.content.Context
 import android.location.Location
 import android.os.Build
-import com.elmorshdi.runningapp.services.Polyline
+import com.elmorshdi.runningapp.services.polyline
 import pub.devrel.easypermissions.EasyPermissions
 import java.util.concurrent.TimeUnit
 
@@ -45,7 +45,7 @@ object TrackingUtility {
                 "${if(milliseconds < 10) "0" else ""}$milliseconds"
     }
     // TO Calculate the distance between two points
-    fun calculatePolylineLength(polyline: Polyline): Float {
+    fun calculatePolylineLength(polyline: polyline): Float {
         var distance = 0f
         for(i in 0..polyline.size - 2) {
             val pos1 = polyline[i]

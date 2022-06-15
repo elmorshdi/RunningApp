@@ -37,21 +37,17 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
     private fun setupBarChart() {
         barrChart.xAxis.apply {
             position = XAxis.XAxisPosition.BOTTOM
-            setDrawLabels(false)
-            axisLineColor = R.color.downy
-            textColor = R.color.downy
+            setDrawLabels(true)
+            axisLineColor = R.color.blueBlack
+            textColor = R.color.blueBlack
             setDrawGridLines(false)
         }
         barrChart.axisLeft.apply {
-            axisLineColor = R.color.downy
-            textColor = R.color.downy
+            axisLineColor = R.color.blueBlack
+            textColor = R.color.blueBlack
             setDrawGridLines(false)
         }
-        barrChart.axisRight.apply {
-            axisLineColor = R.color.downy
-            textColor = R.color.downy
-            setDrawGridLines(false)
-        }
+
         barrChart.apply {
             description.text = "Avg Speed Over Time"
             legend.isEnabled = false
@@ -90,7 +86,7 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
             it?.let {
                 val allAvgSpeeds = it.indices.map { i -> BarEntry(i.toFloat(), it[i].avgSpeedInKMH) }
                 val bardataSet = BarDataSet(allAvgSpeeds, "Avg Speed Over Time").apply {
-                    valueTextColor = R.color.haiti
+                    valueTextColor = R.color.blueBlack
                         color = ContextCompat.getColor(requireContext(), R.color.downy)
                     colors= ColorTemplate.MATERIAL_COLORS.toMutableList()
                 }
