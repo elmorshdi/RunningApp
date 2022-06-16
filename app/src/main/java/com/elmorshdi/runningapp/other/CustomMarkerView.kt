@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class CustomMarkerView(
-    val runs: List<Run>,
+    private val runs: List<Run>,
     c: Context,
     layoutId: Int
 ) : MarkerView(c, layoutId) {

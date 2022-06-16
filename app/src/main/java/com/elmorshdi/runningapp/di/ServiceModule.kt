@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.core.app.NotificationCompat
 import com.elmorshdi.runningapp.R
 import com.elmorshdi.runningapp.other.Constants
+import com.elmorshdi.runningapp.other.Constants.REQUEST_CODE_LOCATION_PERMISSION
 import com.elmorshdi.runningapp.ui.MainActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import dagger.Module
@@ -29,9 +30,9 @@ object ServiceModule {
     @Provides
     fun provideMainActivityPendingIntent(
         @ApplicationContext app: Context
-    ) = PendingIntent.getActivity(
+    ): PendingIntent = PendingIntent.getActivity(
         app,
-        0,
+        REQUEST_CODE_LOCATION_PERMISSION,
         Intent(app, MainActivity::class.java).also {
             it.action = Constants.ACTION_SHOW_TRACKING_FRAGMENT
         },

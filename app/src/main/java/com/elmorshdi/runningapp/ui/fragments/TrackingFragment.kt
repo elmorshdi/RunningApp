@@ -17,7 +17,7 @@ import com.elmorshdi.runningapp.other.Constants.MAP_ZOOM
 import com.elmorshdi.runningapp.other.Constants.POLYLINE_COLOR
 import com.elmorshdi.runningapp.other.Constants.POLYLINE_WIDTH
 import com.elmorshdi.runningapp.other.TrackingUtility
-import com.elmorshdi.runningapp.services.Polyline
+import com.elmorshdi.runningapp.services.polyline
 import com.elmorshdi.runningapp.services.TrackingService
 import com.elmorshdi.runningapp.ui.viewmodels.MainViewModel
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -39,7 +39,7 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
     private val viewModel: MainViewModel by viewModels()
 
     private var isTracking = false
-    private var pathPoints = mutableListOf<Polyline>()
+    private var pathPoints = mutableListOf<polyline>()
 
     private var map: GoogleMap? = null
 

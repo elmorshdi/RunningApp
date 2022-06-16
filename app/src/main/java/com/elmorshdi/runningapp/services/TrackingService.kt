@@ -18,7 +18,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.elmorshdi.runningapp.R
 import com.elmorshdi.runningapp.other.Constants.ACTION_PAUSE_SERVICE
-import com.elmorshdi.runningapp.other.Constants.ACTION_SHOW_TRACKING_FRAGMENT
 import com.elmorshdi.runningapp.other.Constants.ACTION_START_OR_RESUME_SERVICE
 import com.elmorshdi.runningapp.other.Constants.ACTION_STOP_SERVICE
 import com.elmorshdi.runningapp.other.Constants.FASTEST_LOCATION_INTERVAL
@@ -28,7 +27,6 @@ import com.elmorshdi.runningapp.other.Constants.NOTIFICATION_CHANNEL_NAME
 import com.elmorshdi.runningapp.other.Constants.NOTIFICATION_ID
 import com.elmorshdi.runningapp.other.Constants.TIMER_UPDATE_INTERVAL
 import com.elmorshdi.runningapp.other.TrackingUtility
-import com.elmorshdi.runningapp.ui.MainActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
@@ -43,8 +41,8 @@ import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 
-typealias Polyline = MutableList<LatLng>
-typealias Polylines = MutableList<Polyline>
+typealias polyline = MutableList<LatLng>
+typealias polyLines = MutableList<polyline>
 
 @AndroidEntryPoint
 class TrackingService : LifecycleService() {
@@ -65,7 +63,7 @@ class TrackingService : LifecycleService() {
     companion object {
         val timeRunInMillis = MutableLiveData<Long>()
         val isTracking = MutableLiveData<Boolean>()
-        val pathPoints = MutableLiveData<Polylines>()
+        val pathPoints = MutableLiveData<polyLines>()
     }
 
     private fun postInitialValues() {
@@ -200,11 +198,11 @@ class TrackingService : LifecycleService() {
         }
     }
 
-    val locationCallback = object : LocationCallback() {
-        override fun onLocationResult(result: LocationResult?) {
+    private val locationCallback = object : LocationCallback() {
+        override fun onLocationResult(result: LocationResult) {
             super.onLocationResult(result)
             if (isTracking.value!!) {
-                result?.locations?.let { locations ->
+                result.locations.let { locations ->
                     for (location in locations) {
                         addPathPoint(location)
                         Timber.d("NEW LOCATION: ${location.latitude}, ${location.longitude}")

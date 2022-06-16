@@ -33,7 +33,7 @@ class SetupFragment : Fragment(R.layout.fragment_setup) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         if(!isFirstAppOpen) {
             val navOptions = NavOptions.Builder()
                 .setPopUpTo(R.id.setupFragment, true)
@@ -72,7 +72,6 @@ class SetupFragment : Fragment(R.layout.fragment_setup) {
             .putFloat(KEY_WEIGHT, weight.toFloat())
             .putBoolean(KEY_FIRST_TIME_TOGGLE, false)
             .apply()
-        USER_NAME=name
         val toolbarText = "Let's go, $name!"
         requireActivity().tvToolbarTitle.text = toolbarText
         return true

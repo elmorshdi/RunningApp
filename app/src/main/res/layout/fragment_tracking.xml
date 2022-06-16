@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card"
-    style="@style/Widget.Task1.Card"
-    android:layout_width="match_parent"
+     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     android:layout_margin="8dp"
@@ -36,7 +35,6 @@
             android:layout_margin="20dp"
             android:backgroundTint="@color/white"
             android:elevation="10dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             app:cardCornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,32 +46,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:id="@+id/tvTimer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/haiti"
                     android:layout_margin="5dp"
-                    android:drawableBottom="@drawable/ic_timelapse"
-                    android:drawableTint="@color/colorAccent"
-                    android:text="00:00:00:00"
+                    android:text="@string/_00_00_00_00"
                     android:textSize="50sp"
                     app:layout_constraintBottom_toTopOf="@+id/btnToggleRun"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:drawableBottomCompat="@drawable/ic_timelapse"
+                    app:drawableTint="@color/colorAccent" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:orientation="horizontal">
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/btnToggleRun"
                     android:layout_width="wrap_content"
 
                     android:layout_height="wrap_content"
-                    android:text="Start"
+                    android:text="@string/start"
                     android:layout_gravity="center_vertical"
                     android:layout_margin="5dp"
                     android:background="@drawable/bu"
@@ -85,18 +83,18 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvTimer" />
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/btnFinishRun"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Finish Run"
+                    android:text="@string/finish_run"
                     android:gravity="center"
                     android:layout_margin="5dp"
                     android:layout_gravity="center_vertical"
                     android:visibility="gone"
                     android:background="@drawable/bu"
                     android:textColor="@color/white"
-                    app:backgroundTint="@color/colorNote2"
+                    app:backgroundTint="@color/blueWhite"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -113,7 +111,7 @@
                     android:layout_gravity="center_horizontal"
                     android:drawableRight="@drawable/ic__foot"
                     android:drawableTint="@color/haiti"
-                    android:text="0 step "
+                    android:text="@string/_0_step"
                     android:textColor="@color/haiti"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -130,7 +128,7 @@
             android:id="@+id/tvLetsGo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Let's go, USERNAME!"
+            android:text="@string/let_s_go_username"
             android:textAlignment="center"
             android:textSize="50sp"
             android:visibility="gone"

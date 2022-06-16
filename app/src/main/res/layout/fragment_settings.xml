@@ -1,74 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:padding="16dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilName"
+    <TextView
+        android:background="@drawable/round_back"
+        android:id="@+id/tvWelcome"
+        android:padding="10dp"
+        android:backgroundTint="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/blueBlack"
+        android:text="Welcome!\nPlease enter your name and weight."
+        android:textAlignment="center"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/tilWeight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".40" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etName"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:background="@drawable/bu1"
-            android:textColorHint="@color/white"
-            android:textColor="@color/black"
-            android:hint="Your Name"
-            android:inputType="textPersonName" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilWeight"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:background="@drawable/round_back"
+        android:hint="@string/your_name"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+
+        android:textColor="@color/blueBlack"
+        android:textColorHint="@color/blueWhite"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3">
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etWeight"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:background="@drawable/bu1"
-            android:textColorHint="@color/french_gray"
-            android:textColor="@color/haiti"
-            android:hint="Your Weight"
-            android:inputType="numberDecimal" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_back"
+        android:hint="Your Weight"
+        android:inputType="numberDecimal"
+        android:padding="6dp"
+        android:textColor="@color/blueBlack"
+        android:textColorHint="@color/blueWhite"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
 
     <Button
         android:id="@+id/btnApplyChanges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Apply Changes"
         android:background="@drawable/bu"
-        app:backgroundTint="@color/colorAccent"
+        android:text="Apply Changes"
+        android:translationZ="6dp"
         android:textColor="@color/white"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:backgroundTint="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilWeight" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.47" />
+        app:layout_constraintTop_toBottomOf="@+id/etWeight" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
