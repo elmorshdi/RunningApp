@@ -18,6 +18,7 @@ jobs:
           with:
             name: apk
             path: app/build/outputs/apk/debug/app-debug.apk
+ 
     release:
       name: Release APK
       needs: apk
@@ -35,9 +36,10 @@ jobs:
           with:
             tag_name: V1.0.0
             release_name: Release V1.0.0
+
         - name: Upload Release APK
           id: upload_release_asset
-          uses: actions/upload-release-asset@v1.0.1
+          uses: actions/upload-release-asset@v1.0.2
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           with:
@@ -45,3 +47,5 @@ jobs:
             asset_path: apk/app-debug.apk
             asset_name: MyApp.apk
             asset_content_type: application/zip
+        
+
